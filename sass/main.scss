@@ -1,4 +1,5 @@
 *{
+  //0% på margin och padding för visa browsers har olika standards på stylesheets, så det är bra att man restartar stylesheeten
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
@@ -7,15 +8,20 @@
   body{
     background-color: rgb(226, 226, 226);
   }
+  //Så det blir mer som ett nyhetsbrev design + personligen så tycker jag det blev snyggare så 😂
   .container {
     max-width: 70%;
     height: auto;
     margin: auto;
     background: white;
   }
+  //Här börjar Voodoo, header-image 
+  //Position relative så att header taggen blir förfader till de andra taggarna inuti den som har position absolute
   header{
    position: relative;
   }
+  //Position för att kunna använda left och top properties
+  //Position absolute så att den blir relative till sin ancestor
   .rubrik{
     font-size: 2vw;
     color: black;
@@ -45,6 +51,7 @@
     right: 9%;
     font-size: 2vw;
   }
+  //Här börjar Youtubability
   .Box1{
     height: 50vw;
     position: relative;
@@ -80,6 +87,7 @@
     position: absolute;
     right: 0%;
   }
+  //Videons storlek, skrev bara width för då så fixar browsen height åt mig automatiskt 
   video{
     width: 100%;
   }
@@ -120,6 +128,7 @@
     left: 25%;
     top: 45%;
   }
+  //Här börjar de "blåa mollnet" och dens text 
   .Box4{
     height: 20vw;
     position: relative;
@@ -143,42 +152,4 @@
     left: 20%;
     top: 40%;
   }
-  footer{
-    height: 18vw;
-    background-color: #333;
-    color: white;
-    position: relative;
-  }
-  .LiveStream{
-    font-size: 1.5vw;
-    padding-top: 5%;
-    position: absolute;
-    left: 20%;
-  }
-  .p7{
-    font-size: 1vw;
-    width: 23%;
-    padding-top: 10%;
-    position: absolute;
-    left: 20%;
-  }
-  .p7-1{
-    font-size: 1vw;
-    padding-top: 18%;
-    position: absolute;
-    left: 20%;
-  }
-  .p8{
-    font-size: 1vw;
-    padding-top: 10%;
-    position: absolute;
-    left: 58%;
-    direction: rtl;
-  }
-  .p8-1{
-    font-size: 1vw;
-    padding-top: 16%;
-    position: absolute;
-    left: 61.5%;
-  }
-  
+  @import 'footer.css'
